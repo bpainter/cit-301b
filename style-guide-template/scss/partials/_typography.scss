@@ -1,0 +1,11 @@
+body {
+	font-family: $article-font;
+}
+header {
+	h1, h2 {
+		font-family: $top-head-font;
+	}
+}
+h1, h2, h3 {
+	font-family: $headline-font;
+}

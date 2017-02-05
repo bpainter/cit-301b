@@ -1,15 +1,4 @@
 /* -------------------------------- *\
- * xPurpose                         *
-\* -------------------------------- */
-/**
- * This styleguide is for the basic
- * styling of the Zen garden project.
- * It defines basic typography, layouts,
- * and other useful reusable aspects of the
- * styles needed. The overall theme is that
- * of an old timey newspaper.
- */
-/* -------------------------------- *\
  * xColors                          *
 \* -------------------------------- */
 body {
@@ -47,9 +36,6 @@ a {
 .zen-resources li {
   text-transform: uppercase; }
 
-/* -------------------------------- *\
- * xWireframes                      *
-\* -------------------------------- */
 /* -------------------------------- 
 
 xBackground 
@@ -216,7 +202,7 @@ img {
   max-width: 100%; }
 
 input, textarea, select {
-  font-family: "Merriweather", serif;
+  font-family: "Courier New", monospace;
   font-size: 1.6rem; }
 
 header {

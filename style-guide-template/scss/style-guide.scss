@@ -2,35 +2,6 @@
 @import 'partials/prefix-mixins';
 @import 'partials/layout'; // responsive grid and media queries
 
-// color palette - these colors will be the color swatches of the Colors section
-
-$color-1: #5f8ee4; // Cornflower Blue - Action color
-$color-2: #19191a; // Dark Blue
-$color-3: #e4655f; // Red
-$color-4: #e6e6e6; // light grey
-$color-5: #ffffff; // white
-
-// additional colors
-
-$success: #6fce72; // green
-$alert: $color-3;  // red
-
-// fonts
-
-$primary-font: 'Merriweather', serif;
-$secondary-font: 'Open Sans', sans-serif;
-/* -------------------------------- *\
- * xPurpose                         *
-\* -------------------------------- */
-/**
- * This styleguide is for the basic
- * styling of the Zen garden project.
- * It defines basic typography, layouts,
- * and other useful reusable aspects of the
- * styles needed. The overall theme is that
- * of an old timey newspaper.
- */
-
 
 /* -------------------------------- *\
  * xColors                          *
@@ -40,17 +11,8 @@ $border-color: $headline-color;
 $article-color: #222; // Some kind of slightly lighter gray
 $top-head-color: #000; // Black or a touch below
 $background-color: #e4ccb4; // Sepia or gray
-body {
-	color: $article-color;
-}
-header {
-	h1, h2 {
-		color: $top-head-color;
-	}
-}
-h1,h2,h3 {
-	color: $headline-color;
-}
+
+@import 'partials/colors';
 
 
 /* -------------------------------- *\
@@ -60,17 +22,8 @@ $top-head-font: Impact, sans-serif;
 $headline-font: Georgia, serif;
 $article-font: "Courier New", monospace;
 $caption-font: italic "Courier New"; // Caption font to be used in any ::before or ::after or background images inserted through SCSS
-body {
-	font-family: $article-font;
-}
-header {
-	h1, h2 {
-		font-family: $top-head-font;
-	}
-}
-h1, h2, h3 {
-	font-family: $headline-font;
-}
+
+@import 'partials/typography';
 
 
 
@@ -92,11 +45,6 @@ a {
 	text-transform: uppercase;
 }
 // TODO: Add common flexbox features if needed
-
-/* -------------------------------- *\
- * xWireframes                      *
-\* -------------------------------- */
-// TODO: Email Br. Blaylock
 
 /* -------------------------------- 
 
