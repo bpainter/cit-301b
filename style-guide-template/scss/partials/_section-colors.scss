@@ -1,0 +1,120 @@
+/* ------------------------------------------------
+   Color Section                      
+------------------------------------------------ */
+
+.cd-colors {
+
+	li {
+		text-align: center;
+		@include column(.48);
+		margin: 0 4% 1em 0;
+
+		&:nth-of-type(2n) {
+			margin-right: 0;
+		}
+	}
+
+	.cd-color-swatch {
+		position: relative;
+		width: 100%;
+		padding: 50% 0;
+
+		&::before, &::after {
+			/* lighter and darker color shades of the same swatch */
+			content: '';
+			position: absolute;
+			bottom: 0;
+			width: 50%;
+			height: 20%;
+		}
+
+		&::before {
+			left: 0;
+		}
+
+		&::after {
+			right: 0;
+		}
+	}
+
+	b {
+		display: block;
+		padding: .6em 0;
+	}
+
+	li:nth-of-type(1) .cd-color-swatch {
+		background: $headline-color;
+
+		&::before {
+			background: lighten($headline-color, 5%);
+		}
+
+		&::after {
+			background: darken($headline-color, 5%);
+		}
+	}
+
+	li:nth-of-type(2) .cd-color-swatch {
+		background: $article-color;
+
+		&::before {
+			background: lighten($article-color, 5%);
+		}
+
+		&::after {
+			background: darken($article-color, 5%);
+		}
+	}
+
+	li:nth-of-type(3) .cd-color-swatch {
+		background: $top-head-color;
+
+		&::before {
+			background: lighten($top-head-color, 5%);
+		}
+
+		&::after {
+			background: darken($top-head-color, 5%);
+		}
+	}
+
+	li:nth-of-type(4) .cd-color-swatch {
+		background: $background-color;
+
+		&::before {
+			background: lighten($background-color, 5%);
+		}
+
+		&::after {
+			background: darken($background-color, 5%);
+		}
+	}
+
+	@include MQ(S) {
+		li {
+			@include column(.19);
+			margin: 0 1.25% 1em 0;
+
+			&:nth-of-type(2n) {
+				margin-right: 1.25%;
+			}
+
+			&:nth-of-type(5n) {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+.cd-typography .cd-box,
+.cd-buttons .cd-box,
+.cd-icons .cd-box,
+.cd-form .cd-box {
+	padding: 1em;
+
+	@include MQ(S) {
+		.cd-box {
+			padding: 2em;
+		}
+	} 
+}

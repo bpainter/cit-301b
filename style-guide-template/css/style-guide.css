@@ -432,51 +432,6 @@ header {
     .cd-download {
       right: 5%; } }
 
-.design-selection li,
-.viewall,
-.zen-resources li {
-  text-transform: uppercase; }
-
-/* ------------------------------------------------
-   Patterns                      
------------------------------------------------- */
-.cd-box {
-  /* this is the container of various design elements - i.e. the 2 logo of the branding section */
-  border: 1px solid #111;
-  border-radius: 3px;
-  background: #e4ccb4;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  padding: 6px; }
-
-.cd-logo {
-  background-color: #e4ccb4;
-  display: inline-block;
-  height: 100%;
-  position: relative;
-  width: 120px; }
-  .cd-logo img {
-    position: absolute;
-    display: block;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -o-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%); }
-  @media only screen and (min-width: 1024px) {
-    .cd-logo {
-      width: 180px; } }
-  @media only screen and (min-width: 1600px) {
-    .cd-logo {
-      margin-left: 5%; } }
-
-/* ------------------------------------------------
-   Wireframes Section                 
------------------------------------------------- */
-/* ------------------------------------------------
-   Purpose Section           
------------------------------------------------- */
 /* ------------------------------------------------
    Branding Section                      
 ------------------------------------------------ */
@@ -612,6 +567,51 @@ header {
   .cd-buttons button {
     margin: 1em; } }
 
+.design-selection li,
+.viewall,
+.zen-resources li {
+  text-transform: uppercase; }
+
+/* ------------------------------------------------
+   Patterns                      
+------------------------------------------------ */
+.cd-box {
+  /* this is the container of various design elements - i.e. the 2 logo of the branding section */
+  border: 1px solid #111;
+  border-radius: 3px;
+  background: #e4ccb4;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  padding: 6px; }
+
+.cd-logo {
+  background-color: #e4ccb4;
+  display: inline-block;
+  height: 100%;
+  position: relative;
+  width: 120px; }
+  .cd-logo img {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%); }
+  @media only screen and (min-width: 1024px) {
+    .cd-logo {
+      width: 180px; } }
+  @media only screen and (min-width: 1600px) {
+    .cd-logo {
+      margin-left: 5%; } }
+
+/* ------------------------------------------------
+   Wireframes Section                 
+------------------------------------------------ */
+/* ------------------------------------------------
+   Purpose Section           
+------------------------------------------------ */
 /* ------------------------------------------------
    Icons                      
 ------------------------------------------------ */
