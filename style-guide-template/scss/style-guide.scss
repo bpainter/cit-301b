@@ -1,120 +1,23 @@
-
-@import 'partials/prefix-mixins';
-@import 'partials/layout'; // responsive grid and media queries
-
-// color palette - these colors will be the color swatches of the Colors section
-
-$color-1: #5f8ee4; // Cornflower Blue - Action color
-$color-2: #19191a; // Dark Blue
-$color-3: #e4655f; // Red
-$color-4: #e6e6e6; // light grey
-$color-5: #ffffff; // white
-
-// additional colors
-
-$success: #6fce72; // green
-$alert: $color-3;  // red
-
-// fonts
-
-$primary-font: 'Merriweather', serif;
-$secondary-font: 'Open Sans', sans-serif;
-/* -------------------------------- *\
- * xPurpose                         *
-\* -------------------------------- */
-/**
- * This styleguide is for the basic
- * styling of the Zen garden project.
- * It defines basic typography, layouts,
- * and other useful reusable aspects of the
- * styles needed. The overall theme is that
- * of an old timey newspaper.
- */
+/* ------------------------------------------------
+   Partials                      
+------------------------------------------------ */
+@import 'partials/variables';
+@import 'partials/mixins';
+@import 'partials/layout';
+@import 'partials/base';
+@import 'partials/navigation';
 
 
-/* -------------------------------- *\
- * xColors                          *
-\* -------------------------------- */
-$headline-color: #111; // Some kind of darker gray, almost black
-$border-color: $headline-color;
-$article-color: #222; // Some kind of slightly lighter gray
-$top-head-color: #000; // Black or a touch below
-$background-color: #e4ccb4; // Sepia or gray
-body {
-	color: $article-color;
-}
-header {
-	h1, h2 {
-		color: $top-head-color;
-	}
-}
-h1,h2,h3 {
-	color: $headline-color;
-}
-
-
-/* -------------------------------- *\
- * xTypography                      *
-\* -------------------------------- */
-$top-head-font: Impact, sans-serif;
-$headline-font: Georgia, serif;
-$article-font: "Courier New", monospace;
-$caption-font: italic "Courier New"; // Caption font to be used in any ::before or ::after or background images inserted through SCSS
-body {
-	font-family: $article-font;
-}
-header {
-	h1, h2 {
-		font-family: $top-head-font;
-	}
-}
-h1, h2, h3 {
-	font-family: $headline-font;
-}
-
-
-
-/* -------------------------------- *\
- * xNavigation                      *
-\* -------------------------------- */
-// no list style
-ul {
-	list-style: none;
-}
-// no text underline
-a {
-	text-decoration: none;
-}
 // titles in all caps
 .design-selection li,
 .viewall,
 .zen-resources li {
 	text-transform: uppercase;
 }
-// TODO: Add common flexbox features if needed
 
-/* -------------------------------- *\
- * xWireframes                      *
-\* -------------------------------- */
-// TODO: Email Br. Blaylock
-
-/* -------------------------------- 
-
-xBackground 
-
--------------------------------- */
-
-body {
-	/* this is the page background */
-	background-color: $background-color;
-}
-
-/* -------------------------------- 
-
-xPatterns
-
--------------------------------- */
-
+/* ------------------------------------------------
+   Patterns                      
+------------------------------------------------ */
 .cd-box {
 	/* this is the container of various design elements - i.e. the 2 logo of the branding section */
 	border: 1px solid $border-color;
@@ -124,163 +27,335 @@ xPatterns
 	padding: 6px;
 }
 
-/* -------------------------------- 
-
-xNavigation 
-
--------------------------------- */
-
-header {
-	background-color: $background-color;
-}
-
 .cd-logo {
-	/* logo box style */
 	background-color: $background-color;
+	display: inline-block;
+	height: 100%;
+	position: relative;
 	width: 120px;
-
+	img {
+		position: absolute;
+		display: block;
+		top: 50%;
+		left: 50%;
+		@include transform(translateX(-50%) translateY(-50%));
+	}
+	
 	@include MQ(M) {
 		width: 180px;
 	}
-}
-
-.cd-main-nav {
-	/* main navigation background color - full screen on small devices */
-	background: $background-color;
-
-	li a {
-		color: $article-color;
-		border-color: lighten($article-color, 5%);
-	}
-
-	@include MQ(M) {
-		li a {
-			color: lighten($article-color, 40%);
-
-			&.selected {
-				color: $article-color;
-				box-shadow: 0 2px 0 $top-head-color;
-			}
-
-			.no-touch &:hover {
-				color: $article-color;
-			}
-		}
-	}
-}
-
-.cd-nav-trigger span {
-	/* hamburger menu */
-	background-color: $background-color;
-
-	&::before,
-	&::after {
-		/* upper and lower lines */
-		background-color: $background-color;
-	}
-}
-
-.nav-is-visible .cd-nav-trigger span {
-	/* hide line in the center on mobile when nav is visible */
-	background-color: rgba($background-color, 0);
-
-	&::before, &::after {
-		/* preserve visibility of upper and lower lines - close icon */
-		background-color: rgba($background-color, 1);
-	}
-}
-
-.cd-download {
-	/* download button top-right visible on big devices */
-	background-color: lighten($background-color, 10%);
-
-	.no-touch &:hover {
-		background-color: lighten($background-color, 15%);
-	}
-
-	span {
-		/* tooltip */
-		background: $background-color;
-		color: $article-color;
-
-		&::before {
-			/* right arrow color */
-			border-color: $article-color;
-		}
-	}
-}
-
-/* -------------------------------- 
-
-xPage title 
-
--------------------------------- */
-
-main > h1 {
-	color: $headline-color;
 
 	@include MQ(L) {
-		/* title goes into the header on big devices */
+		margin-left: 5%;
+	}
+}
+
+
+
+/* ------------------------------------------------
+   Wireframes Section                 
+------------------------------------------------ */
+
+/* ------------------------------------------------
+   Purpose Section           
+------------------------------------------------ */
+
+/* ------------------------------------------------
+   Branding Section                      
+------------------------------------------------ */
+
+.cd-branding {
+
+	.cd-box {
+		margin-bottom: 1em;
+	}
+
+	img {
+		display: block;
+		width: 100%;
+	}
+
+	ul:last-of-type {
+		padding-top: .6em;
+
+		li {
+			display: inline-block;
+			margin-right: 1em;
+		}
+
+		li:nth-of-type(1) img {
+			width: 90px;
+			height: 90px;
+			border-radius: 1em;
+		}
+
+		li:nth-of-type(2) img {
+			width: 60px;
+			height: 60px;
+			border-radius: .6em;
+		}
+
+		li:nth-of-type(3) img {
+			width: 32px;
+			height: 32px;
+			border-radius: .4em;
+		}
+
+		li:nth-of-type(4) img {
+			width: 16px;
+			height: 16px;
+			border-radius: .2em;
+		}
+	}
+
+	@include MQ(S) {
+		.cd-box {
+			@include column(.49);
+			margin: 0 2% 2em 0;
+
+			&:nth-of-type(2n) {
+				margin-right: 0;
+			}
+		}
+
+		ul:last-of-type {
+			clear: left;
+
+			li {
+				margin-right: 3em;
+			}
+		}
+	}
+}
+
+/* ------------------------------------------------
+   Color Section                      
+------------------------------------------------ */
+
+.cd-colors {
+
+	li {
+		text-align: center;
+		@include column(.48);
+		margin: 0 4% 1em 0;
+
+		&:nth-of-type(2n) {
+			margin-right: 0;
+		}
+	}
+
+	.cd-color-swatch {
+		position: relative;
+		width: 100%;
+		padding: 50% 0;
+
+		&::before, &::after {
+			/* lighter and darker color shades of the same swatch */
+			content: '';
+			position: absolute;
+			bottom: 0;
+			width: 50%;
+			height: 20%;
+		}
+
+		&::before {
+			left: 0;
+		}
+
+		&::after {
+			right: 0;
+		}
+	}
+
+	b {
+		display: block;
+		padding: .6em 0;
+	}
+
+	li:nth-of-type(1) .cd-color-swatch {
+		background: $headline-color;
+
+		&::before {
+			background: lighten($headline-color, 5%);
+		}
+
+		&::after {
+			background: darken($headline-color, 5%);
+		}
+	}
+
+	li:nth-of-type(2) .cd-color-swatch {
+		background: $article-color;
+
+		&::before {
+			background: lighten($article-color, 5%);
+		}
+
+		&::after {
+			background: darken($article-color, 5%);
+		}
+	}
+
+	li:nth-of-type(3) .cd-color-swatch {
+		background: $top-head-color;
+
+		&::before {
+			background: lighten($top-head-color, 5%);
+		}
+
+		&::after {
+			background: darken($top-head-color, 5%);
+		}
+	}
+
+	li:nth-of-type(4) .cd-color-swatch {
+		background: $background-color;
+
+		&::before {
+			background: lighten($background-color, 5%);
+		}
+
+		&::after {
+			background: darken($background-color, 5%);
+		}
+	}
+
+	@include MQ(S) {
+		li {
+			@include column(.19);
+			margin: 0 1.25% 1em 0;
+
+			&:nth-of-type(2n) {
+				margin-right: 1.25%;
+			}
+
+			&:nth-of-type(5n) {
+				margin-right: 0;
+			}
+		}
+	}
+}
+
+.cd-typography .cd-box,
+.cd-buttons .cd-box,
+.cd-icons .cd-box,
+.cd-form .cd-box {
+	padding: 1em;
+
+	@include MQ(S) {
+		.cd-box {
+			padding: 2em;
+		}
+	} 
+}
+
+/* ------------------------------------------------
+   Typography Section                      
+------------------------------------------------ */
+
+.cd-typography {
+
+	h1::before {
+		content: 'Aa - ';
 		color: $headline-color;
 	}
 }
 
-/* -------------------------------- 
+.cd-buttons {
+	.cd-box:first-of-type {
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
 
-xTypography 
+	.cd-box:last-of-type {
+		margin-top: -1px;
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
 
--------------------------------- */
-
-h1, h2 {
-	font-family: $headline-font;
-	color: $headline-color;
-}
-
-h1 {
-	font-size: 2.4rem;
-	font-weight: 300;
-	line-height: 1.2;
-	margin: 0 0 .4em;
-
-	@include MQ(S) {
-		font-size: 3.2rem;
+	button {
+		margin: .4em;
 	}
 
 	@include MQ(M) {
-		font-size: 4rem;
+		button {
+			margin: 1em;
+		}
 	}
 }
 
-h2 {
-	font-weight: bold;
-	text-transform: uppercase;
-	margin: 1em 0;
+/* ------------------------------------------------
+   Icons                      
+------------------------------------------------ */
 
-	@include MQ(S) {
-		font-size: 1.8rem;
-		margin: 1em 0 1.4em;
+.cd-icons {
+	li {
+		display: inline-block;
+		background-position: center center;
+		background-repeat: no-repeat;
+		margin: 1em;
+	}
+
+	.cd-icon-1 {
+		background-image: url('../assets/icons/icon-1.svg'); 
+	}
+
+	.cd-icon-2 {
+		background-image: url('../assets/icons/icon-2.svg'); 
+	}
+
+	.cd-icon-3 {
+		background-image: url('../assets/icons/icon-3.svg'); 
+	}
+
+	.cd-icon-4 {
+		background-image: url('../assets/icons/icon-4.svg'); 
+	}
+
+	.cd-icon-5 {
+		background-image: url('../assets/icons/icon-5.svg'); 
+	}
+
+	.cd-icon-6 {
+		background-image: url('../assets/icons/icon-6.svg'); 
+	}
+
+	.cd-icon-7 {
+		background-image: url('../assets/icons/icon-7.svg'); 
+	}
+
+	.cd-icon-8 {
+		background-image: url('../assets/icons/icon-8.svg'); 
 	}
 }
 
-section > h2::before {
-	/* number before each section title */
-	color: darken($headline-color, 15%);
-}
+/* ------------------------------------------------
+   Form Section             
+------------------------------------------------ */
 
-p {
-	font-size: 1.4rem;
-	line-height: 1.4;
-	color: lighten($article-color, 25%);
-
-	a {
-		color: $article-color;
-		text-decoration: underline;
+.cd-form {
+	input[type=text],
+	.cd-input-wrapper {
+		margin: 1em;
 	}
 
-	@include MQ(S) {
-		font-size: 1.6rem;
-		line-height: 1.6;
+	.cd-input-wrapper {
+		position: relative;
+		display: inline-block;
+	}
+
+	select::-ms-expand {
+      display: none;
 	}
 }
 
-@import 'partials/basic-style';
+@-moz-document url-prefix(){
+	/* hide custom arrow on Firefox */
+	.cd-select::after {
+		display: none;
+	}
+}
+
+.no-csstransitions .cd-select::after {
+	display: none;
+}

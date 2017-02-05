@@ -1,0 +1,220 @@
+/* -------------------------------------
+Styling for basic elements (no classes)
+-------------------------------------- */
+
+/* ------------------------------------------------
+   Root Elements
+------------------------------------------------ */
+*, *::after, *::before {
+	@include box-sizing(border-box);
+}
+
+html * {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background-color: $background-color;
+	color: $article-color;
+	font-size: 1.6rem;
+	font-family: $article-font;
+}
+
+
+/* ------------------------------------------------
+   Links
+------------------------------------------------ */
+a {
+	text-decoration: none;
+}
+
+/* ------------------------------------------------
+   Lists
+------------------------------------------------ */
+ul {
+	list-style: none;
+}
+
+/* ------------------------------------------------
+   Headings
+------------------------------------------------ */
+header {
+	h1, h2 {
+		color: $top-head-color;
+		font-family: $top-head-font;
+	}
+}
+h1, h2, h3 {
+	color: $headline-color;
+	font-family: $headline-font;
+}
+
+h1, h2 {
+	font-family: $headline-font;
+	color: $headline-color;
+}
+
+h1 {
+	font-size: 2.4rem;
+	font-weight: 300;
+	line-height: 1.2;
+	margin: 0 0 .4em;
+
+	@include MQ(S) {
+		font-size: 3.2rem;
+	}
+
+	@include MQ(M) {
+		font-size: 4rem;
+	}
+}
+
+h2 {
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 1em 0;
+
+	@include MQ(S) {
+		font-size: 1.8rem;
+		margin: 1em 0 1.4em;
+	}
+}
+
+section > h2::before {
+	/* number before each section title */
+	color: darken($headline-color, 15%);
+}
+
+/* ------------------------------------------------
+   Paragraphs
+------------------------------------------------ */
+p {
+	font-size: 1.4rem;
+	line-height: 1.4;
+	color: lighten($article-color, 25%);
+
+	a {
+		color: $article-color;
+		text-decoration: underline;
+	}
+
+	@include MQ(S) {
+		font-size: 1.6rem;
+		line-height: 1.6;
+	}
+}
+
+/* ------------------------------------------------
+   Images
+------------------------------------------------ */
+img {
+	max-width: 100%;
+}
+
+/* ------------------------------------------------
+   Forms
+------------------------------------------------ */
+input, textarea, select {
+	font-family: $primary-font;
+	font-size: 1.6rem;
+}
+
+/* ------------------------------------------------
+   Main Content
+------------------------------------------------ */
+main {
+	width: 90%;
+	max-width: $M;
+	margin: 0 auto;
+	padding: 50px 0;
+
+	> h1 {
+		text-align: center;
+		margin: 3em 0;
+	}
+
+	@include MQ(M) {
+		padding-top: 80px;
+	}
+
+	@include MQ(L) {
+		max-width: none;
+		padding: 120px 0 50px;
+
+		> h1 {
+			position: fixed;
+			top: 0;
+			left: 50%;
+			height: 80px;
+			line-height: 80px;
+			width: 400px;
+			margin: 0 0 0 -200px;
+			font-size: 2.6rem;
+			z-index: 20;
+		}
+	}
+}
+
+/* ------------------------------------------------
+   Sections
+------------------------------------------------ */
+section {
+	margin: 3em 0;
+	@include clearfix;
+
+	&:nth-of-type(1) h2::before {
+		content: '1. ';
+	}
+
+	&:nth-of-type(2) h2::before {
+		content: '2. ';
+	}
+
+	&:nth-of-type(3) h2::before {
+		content: '3. ';
+	}
+
+	&:nth-of-type(4) h2::before {
+		content: '4. ';
+	}
+
+	&:nth-of-type(5) h2::before {
+		content: '5. ';
+	}
+
+	&:nth-of-type(6) h2::before {
+		content: '6. ';
+	}
+    
+    &:nth-of-type(7) h2::before {
+		content: '7. ';
+	}
+      &:nth-of-type(8) h2::before {
+		content: '8. ';
+	}
+      &:nth-of-type(9) h2::before {
+		content: '9. ';
+	}
+    &:nth-of-type(10) h2::before {
+		content: '10. ';
+	}
+
+	@include MQ(S) {
+		margin: 3em 0 5em;
+	}
+
+	@include MQ(L) {
+		@include column(.48);
+		margin: 0 4% 4em 0;
+
+		&:nth-of-type(2n) {
+			margin-right: 0;
+		}
+	}
+}
+

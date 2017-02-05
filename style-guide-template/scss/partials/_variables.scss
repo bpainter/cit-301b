@@ -1,0 +1,36 @@
+/* ------------------------------------------------
+   Colors
+------------------------------------------------ */
+$color-1: #5f8ee4; // Cornflower Blue - Action color
+$color-2: #19191a; // Dark Blue
+$color-3: #e4655f; // Red
+$color-4: #e6e6e6; // light grey
+$color-5: #ffffff; // white
+
+// additional colors
+$success: #6fce72; // green
+$alert: $color-3;  // red
+
+$headline-color: #111; // Some kind of darker gray, almost black
+$border-color: $headline-color;
+$article-color: #222; // Some kind of slightly lighter gray
+$top-head-color: #000; // Black or a touch below
+$background-color: #e4ccb4; // Sepia or gray
+
+/* ------------------------------------------------
+   Font Families                      
+------------------------------------------------ */
+$primary-font: 'Merriweather', serif;
+$secondary-font: 'Open Sans', sans-serif;
+$top-head-font: Impact, sans-serif;
+$headline-font: Georgia, serif;
+$article-font: "Courier New", monospace;
+$caption-font: italic "Courier New"; // Caption font to be used in any ::before or ::after or background images inserted through SCSS
+
+/* ------------------------------------------------
+   Breakpoints                      
+------------------------------------------------ */
+$S:     768px;   
+$M:     1024px;     
+$L:     1600px;   
+
