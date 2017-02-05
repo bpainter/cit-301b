@@ -1,11 +1,68 @@
-body {
-	font-family: $article-font;
-}
+/* ------------------------------------------------
+   Headings
+------------------------------------------------ */
 header {
 	h1, h2 {
+		color: $top-head-color;
 		font-family: $top-head-font;
 	}
 }
 h1, h2, h3 {
+	color: $headline-color;
 	font-family: $headline-font;
+}
+
+h1, h2 {
+	font-family: $headline-font;
+	color: $headline-color;
+}
+
+h1 {
+	font-size: 2.4rem;
+	font-weight: 300;
+	line-height: 1.2;
+	margin: 0 0 .4em;
+
+	@include MQ(S) {
+		font-size: 3.2rem;
+	}
+
+	@include MQ(M) {
+		font-size: 4rem;
+	}
+}
+
+h2 {
+	font-weight: bold;
+	text-transform: uppercase;
+	margin: 1em 0;
+
+	@include MQ(S) {
+		font-size: 1.8rem;
+		margin: 1em 0 1.4em;
+	}
+}
+
+section > h2::before {
+	/* number before each section title */
+	color: darken($headline-color, 15%);
+}
+
+/* ------------------------------------------------
+   Paragraphs
+------------------------------------------------ */
+p {
+	font-size: 1.4rem;
+	line-height: 1.4;
+	color: lighten($article-color, 25%);
+
+	a {
+		color: $article-color;
+		text-decoration: underline;
+	}
+
+	@include MQ(S) {
+		font-size: 1.6rem;
+		line-height: 1.6;
+	}
 }
