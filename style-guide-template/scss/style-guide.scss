@@ -3,9 +3,11 @@
 ------------------------------------------------ */
 @import 'partials/variables';
 @import 'partials/mixins';
-@import 'partials/layout';
+
 @import 'partials/base';
+@import 'partials/typography';
 @import 'partials/navigation';
+
 
 // titles in all caps
 .design-selection li,
