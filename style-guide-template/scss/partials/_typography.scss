@@ -6,15 +6,18 @@ header {
 		color: $top-head-color;
 		font-family: $top-head-font;
 	}
+
+	h1 {
+		font-size: 5rem;
+	}
+
+	h2 {
+		font-size: 2.2rem;
+	}
 }
 h1, h2, h3 {
 	color: $headline-color;
 	font-family: $headline-font;
-}
-
-h1, h2 {
-	font-family: $headline-font;
-	color: $headline-color;
 }
 
 h1 {
@@ -33,6 +36,7 @@ h1 {
 }
 
 h2 {
+	font-size: 1.8rem;
 	font-weight: bold;
 	text-transform: uppercase;
 	margin: 1em 0;

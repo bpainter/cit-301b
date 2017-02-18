@@ -16,6 +16,7 @@ html * {
 
 html {
 	font-size: 62.5%;
+	// overflow-x: hidden;
 }
 
 body {
@@ -23,6 +24,8 @@ body {
 	color: $article-color;
 	font-size: 1.6rem;
 	font-family: $article-font;
+	margin: 0;
+	padding: 5px;
 }
 
 
@@ -105,49 +108,49 @@ section {
 	margin: 3em 0;
 	@include clearfix;
 
-	&:nth-of-type(1) h2::before {
-		content: '1. ';
-	}
+	// &:nth-of-type(1) h2::before {
+	// 	content: '1. ';
+	// }
 
-	&:nth-of-type(2) h2::before {
-		content: '2. ';
-	}
+	// &:nth-of-type(2) h2::before {
+	// 	content: '2. ';
+	// }
 
-	&:nth-of-type(3) h2::before {
-		content: '3. ';
-	}
+	// &:nth-of-type(3) h2::before {
+	// 	content: '3. ';
+	// }
 
-	&:nth-of-type(4) h2::before {
-		content: '4. ';
-	}
+	// &:nth-of-type(4) h2::before {
+	// 	content: '4. ';
+	// }
 
-	&:nth-of-type(5) h2::before {
-		content: '5. ';
-	}
+	// &:nth-of-type(5) h2::before {
+	// 	content: '5. ';
+	// }
 
-	&:nth-of-type(6) h2::before {
-		content: '6. ';
-	}
+	// &:nth-of-type(6) h2::before {
+	// 	content: '6. ';
+	// }
     
-    &:nth-of-type(7) h2::before {
-		content: '7. ';
-	}
-      &:nth-of-type(8) h2::before {
-		content: '8. ';
-	}
-      &:nth-of-type(9) h2::before {
-		content: '9. ';
-	}
-    &:nth-of-type(10) h2::before {
-		content: '10. ';
-	}
+  //   &:nth-of-type(7) h2::before {
+	// 	content: '7. ';
+	// }
+  //     &:nth-of-type(8) h2::before {
+	// 	content: '8. ';
+	// }
+  //     &:nth-of-type(9) h2::before {
+	// 	content: '9. ';
+	// }
+  //   &:nth-of-type(10) h2::before {
+	// 	content: '10. ';
+	// }
 
 	@include MQ(S) {
 		margin: 3em 0 5em;
 	}
 
 	@include MQ(L) {
-		@include column(.48);
+		// @include column(.48);
 		margin: 0 4% 4em 0;
 
 		&:nth-of-type(2n) {

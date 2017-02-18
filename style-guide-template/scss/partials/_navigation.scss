@@ -3,12 +3,14 @@
 ------------------------------------------------ */
 header {
 	background-color: $background-color;
-	position: fixed;
-	height: 50px;
-	width: 100%;
+	// position: fixed;
+	// height: 50px;
+	width: 100vw;
+	text-align: center;
 	top: 0;
 	left: 0;
-	box-shadow: 0 1px 1px rgba(#000, .1);
+	// box-shadow: 0 1px 1px rgba(#000, .25);
+	border-bottom: 2px solid rgba(#000, .25);
 	z-index: 10;
 
 	nav {
@@ -16,7 +18,7 @@ header {
 	}
 
 	@include MQ(M) {
-		height: 80px;
+		// height: 80px;
 		@include clearfix;
 	}
 }
