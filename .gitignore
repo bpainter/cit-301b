@@ -2,3 +2,4 @@
 **/.sass-cache
 *.map
 *.log
+**/*.db
