@@ -4,142 +4,147 @@
 @import 'partials/variables';
 @import 'partials/mixins';
 
+@import 'partials/normalize';
 @import 'partials/base';
 @import 'partials/typography';
 @import 'partials/navigation';
 
-@import 'partials/section-branding';
-@import 'partials/section-colors';
-@import 'partials/section-typography';
+// Need to make another file specific to
+// Zengarden without the styleguide specific bits
+
+@import 'partials/sections';
+// @import 'partials/section-branding';
+// @import 'partials/section-colors';
+// @import 'partials/section-typography';
 
 
-// titles in all caps
-.design-selection li,
-.viewall,
-.zen-resources li {
-	text-transform: uppercase;
-}
+// // titles in all caps
+// .design-selection li,
+// .viewall,
+// .zen-resources li {
+// 	text-transform: uppercase;
+// }
 
-/* ------------------------------------------------
-   Patterns                      
------------------------------------------------- */
-.cd-box {
-	/* this is the container of various design elements - i.e. the 2 logo of the branding section */
-	border: 1px solid $border-color;
-	border-radius: 3px;
-	background: $background-color;
-	box-shadow: 0 1px 1px rgba(#000, .05);
-	padding: 6px;
-}
+// /* ------------------------------------------------
+//    Patterns                      
+// ------------------------------------------------ */
+// .cd-box {
+// 	/* this is the container of various design elements - i.e. the 2 logo of the branding section */
+// 	border: 1px solid $border-color;
+// 	border-radius: 3px;
+// 	background: $background-color;
+// 	box-shadow: 0 1px 1px rgba(#000, .05);
+// 	padding: 6px;
+// }
 
-.cd-logo {
-	background-color: $background-color;
-	display: inline-block;
-	height: 100%;
-	position: relative;
-	width: 120px;
-	img {
-		position: absolute;
-		display: block;
-		top: 50%;
-		left: 50%;
-		@include transform(translateX(-50%) translateY(-50%));
-	}
+// .cd-logo {
+// 	background-color: $background-color;
+// 	display: inline-block;
+// 	height: 100%;
+// 	position: relative;
+// 	width: 120px;
+// 	img {
+// 		position: absolute;
+// 		display: block;
+// 		top: 50%;
+// 		left: 50%;
+// 		@include transform(translateX(-50%) translateY(-50%));
+// 	}
 	
-	@include MQ(M) {
-		width: 180px;
-	}
+// 	@include MQ(M) {
+// 		width: 180px;
+// 	}
 
-	@include MQ(L) {
-		margin-left: 5%;
-	}
-}
+// 	@include MQ(L) {
+// 		margin-left: 5%;
+// 	}
+// }
 
-/* ------------------------------------------------
-   Wireframes Section                 
------------------------------------------------- */
+// /* ------------------------------------------------
+//    Wireframes Section                 
+// ------------------------------------------------ */
 
-/* ------------------------------------------------
-   Purpose Section           
------------------------------------------------- */
-
-
+// /* ------------------------------------------------
+//    Purpose Section           
+// ------------------------------------------------ */
 
 
 
 
-/* ------------------------------------------------
-   Icons                      
------------------------------------------------- */
 
-.cd-icons {
-	li {
-		display: inline-block;
-		background-position: center center;
-		background-repeat: no-repeat;
-		margin: 1em;
-	}
 
-	.cd-icon-1 {
-		background-image: url('../assets/icons/icon-1.svg'); 
-	}
+// /* ------------------------------------------------
+//    Icons                      
+// ------------------------------------------------ */
 
-	.cd-icon-2 {
-		background-image: url('../assets/icons/icon-2.svg'); 
-	}
+// .cd-icons {
+// 	li {
+// 		display: inline-block;
+// 		background-position: center center;
+// 		background-repeat: no-repeat;
+// 		margin: 1em;
+// 	}
 
-	.cd-icon-3 {
-		background-image: url('../assets/icons/icon-3.svg'); 
-	}
+// 	.cd-icon-1 {
+// 		background-image: url('../assets/icons/icon-1.svg'); 
+// 	}
 
-	.cd-icon-4 {
-		background-image: url('../assets/icons/icon-4.svg'); 
-	}
+// 	.cd-icon-2 {
+// 		background-image: url('../assets/icons/icon-2.svg'); 
+// 	}
 
-	.cd-icon-5 {
-		background-image: url('../assets/icons/icon-5.svg'); 
-	}
+// 	.cd-icon-3 {
+// 		background-image: url('../assets/icons/icon-3.svg'); 
+// 	}
 
-	.cd-icon-6 {
-		background-image: url('../assets/icons/icon-6.svg'); 
-	}
+// 	.cd-icon-4 {
+// 		background-image: url('../assets/icons/icon-4.svg'); 
+// 	}
 
-	.cd-icon-7 {
-		background-image: url('../assets/icons/icon-7.svg'); 
-	}
+// 	.cd-icon-5 {
+// 		background-image: url('../assets/icons/icon-5.svg'); 
+// 	}
 
-	.cd-icon-8 {
-		background-image: url('../assets/icons/icon-8.svg'); 
-	}
-}
+// 	.cd-icon-6 {
+// 		background-image: url('../assets/icons/icon-6.svg'); 
+// 	}
 
-/* ------------------------------------------------
-   Form Section             
------------------------------------------------- */
+// 	.cd-icon-7 {
+// 		background-image: url('../assets/icons/icon-7.svg'); 
+// 	}
 
-.cd-form {
-	input[type=text],
-	.cd-input-wrapper {
-		margin: 1em;
-	}
+// 	.cd-icon-8 {
+// 		background-image: url('../assets/icons/icon-8.svg'); 
+// 	}
+// }
 
-	.cd-input-wrapper {
-		position: relative;
-		display: inline-block;
-	}
+// /* ------------------------------------------------
+//    Form Section             
+// ------------------------------------------------ */
 
-	select::-ms-expand {
-      display: none;
-	}
-}
+// .cd-form {
+// 	input[type=text],
+// 	.cd-input-wrapper {
+// 		margin: 1em;
+// 	}
 
-@-moz-document url-prefix(){
-	/* hide custom arrow on Firefox */
-	.cd-select::after {
-		display: none;
-	}
-}
+// 	.cd-input-wrapper {
+// 		position: relative;
+// 		display: inline-block;
+// 	}
 
-.no-csstransitions .cd-select::after {
-	display: none;
-}
+// 	select::-ms-expand {
+//       display: none;
+// 	}
+// }
+
+// @-moz-document url-prefix(){
+// 	/* hide custom arrow on Firefox */
+// 	.cd-select::after {
+// 		display: none;
+// 	}
+// }
+
+// .no-csstransitions .cd-select::after {
+// 	display: none;
+// }

@@ -5,10 +5,6 @@ Styling for basic elements (no classes)
 /* ------------------------------------------------
    Root Elements
 ------------------------------------------------ */
-*, *::after, *::before {
-	@include box-sizing(border-box);
-}
-
 html * {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -25,7 +21,7 @@ body {
 	font-size: 1.6rem;
 	font-family: $article-font;
 	margin: 0;
-	padding: 5px;
+	padding: 2% 5%;
 }
 
 
@@ -105,7 +101,7 @@ main {
    Sections
 ------------------------------------------------ */
 section {
-	margin: 3em 0;
+	margin: 0;
 	@include clearfix;
 
 	// &:nth-of-type(1) h2::before {
@@ -146,12 +142,12 @@ section {
 	// }
 
 	@include MQ(S) {
-		margin: 3em 0 5em;
+		// margin: 3em 0 5em;
 	}
 
 	@include MQ(L) {
 		// @include column(.48);
-		margin: 0 4% 4em 0;
+		// margin: 0 4% 4em 0;
 
 		&:nth-of-type(2n) {
 			margin-right: 0;

@@ -4,20 +4,28 @@
 header {
 	h1, h2 {
 		color: $top-head-color;
-		font-family: $top-head-font;
+		font-family: $primary-font;
 	}
 
 	h1 {
-		font-size: 5rem;
+		font-size: 8rem;
+		font-weight: bold;
+		line-height: 1;
+		margin: 0;
+		text-transform: uppercase;
 	}
 
 	h2 {
-		font-size: 2.2rem;
+		font-size: 2.4rem;
+		font-weight: normal;
+		margin: 0;
 	}
 }
-h1, h2, h3 {
-	color: $headline-color;
+h3 {
 	font-family: $headline-font;
+	font-size: 3em;
+	margin: 0;
+	text-transform: uppercase;
 }
 
 h1 {
