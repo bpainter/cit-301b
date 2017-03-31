@@ -1,0 +1,108 @@
+body {
+    background-color: #f8ecc2;
+    margin: auto;
+    padding: 20px;
+}
+
+h1, h2, .summary, .preamble, .explanation, .participation, .benefits, .requirements {
+    border-bottom: 2px solid;
+    text-align: justify;
+}
+
+.preamble {
+    background-image: url("https://placehold.it/130x400") ;
+    background-repeat:no-repeat;
+    float: left;
+    }
+
+.preamble p {
+    float: right;
+    width:60%;
+}
+
+.preamble h3 {
+    float: right;
+    width:60%;
+}
+.benefits {
+    background-image: url("https://placehold.it/130x400") ;
+    background-repeat:no-repeat;
+    float:left;
+    
+}
+
+.benefits p {
+    float: right;
+    width:60%;
+}
+
+.resources {
+     border-bottom: 2px solid;
+    text-align: center;
+}
+
+.zen-resources ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;  
+}
+
+.zen-resources li {
+    border: 1px solid;
+    list-style-type: none;
+    padding: 10px;
+    margin: 10px;
+    width: 15%;
+} 
+
+.zen-resources ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;  
+}
+
+footer {
+   display: flex;
+    flex-wrap: wrap; 
+    justify-content:space-around;
+    border-bottom: 2px solid;
+    margin-bottom: 20px;
+}
+
+footer a {
+    border: 1px solid;
+    list-style-type: none;
+    padding: 10px;
+    margin: 10px;
+    width: 15%;
+    text-decoration: none;
+}
+
+.design-selection ul {
+    display: flex;
+    flex-wrap: wrap; 
+    flex-direction: row;
+    justify-content:space-around;
+    border-left: 2px solid;
+    border-right: 2px solid;
+}
+
+.design-selection li {
+    border: 1px solid;
+    list-style-type: none;
+    padding: 10px;
+    margin: 10px;
+    width: 25%;
+    
+}
+
+
+.design-selection a:link, .zen-resources a:link  {
+    text-decoration: none;
+}
+
+
+
+
+
+

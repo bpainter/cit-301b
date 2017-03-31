@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather");
+@font-face {
+  font-family: incisedblackwidenormal;
+  src: url(./assets/fonts/Incised_Black_Wide-webfont.woff); }
+body {
+  background-color: #f8ecc2;
+  font-family: "Merriweather", serif;
+  margin: auto;
+  padding: 20px; }
+
+h1, h2 {
+  margin: 0;
+  text-align: center; }
+
+h1 {
+  font-family: incisedblackwidenormal, sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 2px; }
+
+h2 {
+  border-bottom: 2px solid;
+  font-size: 1.25rem;
+  margin-top: 5px;
+  text-transform: uppercase; }
+
+.summary, .preamble, .main.supporting > div {
+  border-bottom: 2px solid;
+  text-align: justify; }
+  .summary h3, .preamble h3, .main.supporting > div h3 {
+    font-style: italic;
+    letter-spacing: 2px;
+    text-transform: uppercase; }
+
+.preamble {
+  background-image: url("https://placehold.it/130x400");
+  background-repeat: no-repeat;
+  float: left; }
+  .preamble h3, .preamble p {
+    float: right;
+    width: 60%; }
+  .preamble h3 {
+    margin-top: 0; }
+
+.benefits {
+  background-image: url("https://placehold.it/130x400");
+  background-repeat: no-repeat;
+  float: left; }
+  .benefits h3, .benefits p {
+    float: right;
+    width: 60%; }
+  .benefits h3 {
+    margin-top: 0; }
+
+.resources {
+  border-bottom: 2px solid; }
+
+.zen-resources ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 70%; }
+  .zen-resources ul li {
+    border: 1px solid;
+    list-style-type: none;
+    margin: 10px 0;
+    padding: 20px;
+    text-align: center; }
+    .zen-resources ul li a {
+      flex-grow: 1;
+      list-style-type: none;
+      margin: 10px 0;
+      padding: 10px 0;
+      text-align: center;
+      text-decoration: none;
+      transition: 0.2s all linear;
+      width: 15%; }
+      .zen-resources ul li a:hover {
+        font-weight: bolder;
+        letter-spacing: 2px; }
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 2px solid;
+  margin-bottom: 20px; }
+  footer a {
+    border: 1px solid;
+    flex-grow: 1;
+    list-style-type: none;
+    margin: 10px 0;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.2s all linear;
+    width: 15%; }
+    footer a:hover {
+      font-weight: bolder;
+      letter-spacing: 2px; }
+    footer a:not(:first-child) {
+      margin-left: 5px; }
+
+.design-selection ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0;
+  border-left: 2px solid;
+  border-right: 2px solid; }
+  .design-selection ul li {
+    border: 1px solid;
+    list-style-type: none;
+    padding: 25px;
+    margin: 10px;
+    width: 25%; }
+
+.design-selection a:link, .zen-resources a:link {
+  text-decoration: none; }
+
+.design-archives ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin-left: -40px; }
+
+/*# sourceMappingURL=style.css.map */
