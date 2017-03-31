@@ -20,11 +20,13 @@ $background-color: #e4ccb4; // Sepia or gray
 /* ------------------------------------------------
    Font Families                      
 ------------------------------------------------ */
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,900|Open+Sans:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
 $primary-font: 'Merriweather', serif;
 $secondary-font: 'Open Sans', sans-serif;
-$top-head-font: Impact, sans-serif;
-$headline-font: Georgia, serif;
-$article-font: "Courier New", monospace;
+$headline-font: 'Anton', serif;
+$article-font: 'Merriweather', serif;
 $caption-font: italic "Courier New"; // Caption font to be used in any ::before or ::after or background images inserted through SCSS
 
 /* ------------------------------------------------
