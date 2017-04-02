@@ -1,0 +1,27 @@
+/* ------------------------------------------------
+   Colors
+------------------------------------------------ */
+$background-color: #73868C; // Gray
+$wrapper-background-color: #E2E2D8;
+$text-color: #565752; // Dark gray
+$line-color: #BDBDB5; // light gray
+
+/* ------------------------------------------------
+   Fonts
+------------------------------------------------ */
+@import url('https://fonts.googleapis.com/css?family=Gravitas+One');
+@import url('https://fonts.googleapis.com/css?family=Donegal+One');
+
+$title-font: Gravitas One, Georgia, serif;
+$heading-font: Donegal One, Georgia, serif;
+$body-font: Donegal One, Georgia, serif;
+
+
+$sub-baseline: 5px;
+$baseline: $sub-baseline*3;
+/* ------------------------------------------------
+   Breakpoints                      
+------------------------------------------------ */
+$S:     768px;   
+$M:     1024px;     
+$L:     1600px;  

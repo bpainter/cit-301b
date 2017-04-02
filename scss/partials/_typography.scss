@@ -1,0 +1,115 @@
+/* ------------------------------------------------
+   Headings
+------------------------------------------------ */
+h1 {
+	font-family: $title-font;
+	font-size: 4rem;
+	line-height: 1;
+	margin: $baseline 0 $baseline;
+	padding: 100px 0 0;
+	position: relative;
+	text-align: center;
+	text-transform: uppercase;
+	&:before {
+		$price-size: 50px;
+		content: "5";
+		background-color: $text-color;
+		border-radius: $price-size;
+		color: $wrapper-background-color;
+		display: block;
+		font-size: 3rem;
+		height: $price-size;
+		line-height: $price-size;
+		margin-left: -$price-size/2;
+		opacity: .5;
+		position: absolute;
+			top: 0;
+			left: 50%;
+		width: $price-size;
+
+	}
+	&:after {
+		content: "Cents";
+		font-size: 1.4rem;
+		opacity: .5;
+		position: absolute;
+			top: 55px;
+			left: 0;
+			right: 0;
+	}
+}
+
+h2 {
+	border-top: 3px solid $line-color;
+	border-bottom: 3px solid $line-color;
+	font-size: 1.8rem;
+	font-weight: bold;
+	margin: 0;
+	padding: 8px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+h3 {
+	font-size: 3em;
+	margin: 0;
+	padding-top: $baseline;
+	.sidebar & {
+		font-size: 2em;
+	}
+	@include MQ(S) {
+		padding-top: $baseline*2;	
+	}
+}
+/* ------------------------------------------------
+   Paragraphs
+------------------------------------------------ */
+p {
+	font-size: 1.4rem;
+	line-height: 1.4;
+	color: lighten($text-color, 25%);
+
+	@include MQ(S) {
+		font-size: 1.6rem;
+		line-height: 1.6;
+	}
+}
+
+
+/* ------------------------------------------------
+   Links
+------------------------------------------------ */
+a {
+	white-space: nowrap;
+	text-decoration: none;
+	position: relative;
+	-webkit-backface-visibility: hidden; // prevents an annoying flicker on hover
+	
+	&:focus {
+		outline: 0;
+	}
+	
+	// Creates the lines under the text
+	&:after, 
+	&:before {
+		background-color: $text-color;
+		content: "";
+		height: 1px;
+		position: absolute;
+		  bottom: 0;
+		  left: 0;
+		width: 100%;
+	}
+	&:after {
+		opacity: .4;
+	}
+	&:before {
+		transform: scaleX(0);
+		transition: all 0.3s ease-in-out 0s;
+	}
+	&:hover:before,
+	&:focus:before,
+	&:active:before {
+		transform: scaleX(1);
+	}
+}

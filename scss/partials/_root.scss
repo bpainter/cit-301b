@@ -1,0 +1,35 @@
+/* -------------------------------------
+Styling for basic elements (no classes)
+-------------------------------------- */
+
+/* ------------------------------------------------
+   Root Elements
+------------------------------------------------ */
+html * {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+html {
+	font-size: 62.5%;
+	// overflow-x: hidden;
+}
+
+body {
+	background-color: $background-color;
+	color: $text-color;
+	font-size: 100%;
+	font-family: $body-font;
+	margin: 0;
+	padding: 3%;
+}
+
+.page-wrapper {
+	background-color: $wrapper-background-color;
+	box-shadow: rgba(#000, .3) 1px 1px 3px 0;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 2% 5%;
+	position: relative;
+}
+
